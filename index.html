@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Apex One - F1 Scroll World</title>
+  <meta name="description" content="Scroll through the clay diorama world of an F1 car." />
+  <style>
+    :root,
+    .sw-root {
+      --sw-bg: #F4EBDD;
+      --sw-ink: #161616;
+      --sw-ink-soft: #5D6067;
+      --sw-accent: #D51F2A;
+      --sw-font-display: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, sans-serif;
+      --sw-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: 'Apex One', href: '#top' },
+      cta: { label: 'Enter the paddock', href: '#finale' },
+      hint: 'scroll to fly',
+      diveScroll: 1.35,
+      connScroll: 0.72,
+      crossfade: 0.14,
+      sections: [
+        {
+          id: 'engine',
+          label: 'Engine',
+          still: 'assets/engine.webp',
+          stillMobile: 'assets/engine-m.webp',
+          clip: 'assets/vid/engine.mp4',
+          clipMobile: 'assets/vid/engine-m.mp4',
+          accent: '#D51F2A',
+          scroll: 1.55,
+          linger: 0.42,
+          eyebrow: 'Power unit',
+          title: 'The heart goes in.',
+          body: 'Turbo, hybrid battery, and cooling loops become the force behind the lap.',
+          tags: ['Hybrid power', 'Turbo', 'Cooling'],
+        },
+        {
+          id: 'tires',
+          label: 'Tires',
+          still: 'assets/tires.webp',
+          stillMobile: 'assets/tires-m.webp',
+          clip: 'assets/vid/tires.mp4',
+          clipMobile: 'assets/vid/tires-m.mp4',
+          accent: '#A9D7E8',
+          scroll: 1.28,
+          linger: 0.34,
+          eyebrow: 'Contact patch',
+          title: 'Grip gets assembled.',
+          body: 'Slicks, rims, brakes, and suspension turn power into corner speed.',
+          tags: ['Slick tires', 'Brake discs', 'Wishbones'],
+        },
+        {
+          id: 'body',
+          label: 'Body Kit',
+          still: 'assets/body.webp',
+          stillMobile: 'assets/body-m.webp',
+          clip: 'assets/vid/body.mp4',
+          clipMobile: 'assets/vid/body-m.mp4',
+          accent: '#D8A431',
+          scroll: 1.32,
+          linger: 0.4,
+          eyebrow: 'Aero shell',
+          title: 'Carbon finds form.',
+          body: 'Wings, floor, sidepods, and halo shape how the car slices the air.',
+          tags: ['Front wing', 'Diffuser', 'Halo'],
+        },
+        {
+          id: 'assembly',
+          label: 'Assembly',
+          still: 'assets/assembly.webp',
+          stillMobile: 'assets/assembly-m.webp',
+          clip: 'assets/vid/assembly.mp4',
+          clipMobile: 'assets/vid/assembly-m.mp4',
+          accent: '#6EA96A',
+          scroll: 1.2,
+          linger: 0.28,
+          eyebrow: 'Final fit',
+          title: 'Parts become a car.',
+          body: 'The chassis drops onto stands while the last body panels and wheels line up.',
+          tags: ['Torque tools', 'Panel fit', 'Race prep'],
+        },
+        {
+          id: 'finale',
+          label: 'Finale',
+          still: 'assets/finale.webp',
+          stillMobile: 'assets/finale-m.webp',
+          clip: 'assets/vid/finale.mp4',
+          clipMobile: 'assets/vid/finale-m.mp4',
+          accent: '#D51F2A',
+          scroll: 1.75,
+          linger: 0.52,
+          eyebrow: 'Lights out',
+          title: 'Built to disappear.',
+          body: 'A tiny world of engineering resolves into one red car and an empty straight.',
+          tags: ['Race ready', 'Podium chase'],
+          cta: {
+            primary: { label: 'Restart the lap', href: '#top' },
+            secondary: { label: 'Inspect assets', href: 'assets/' },
+          },
+        },
+      ],
+      connectors: [
+        'assets/vid/conn1.mp4',
+        'assets/vid/conn2.mp4',
+        'assets/vid/conn3.mp4',
+        'assets/vid/conn4.mp4',
+      ],
+      connectorsMobile: [
+        'assets/vid/conn1-m.mp4',
+        'assets/vid/conn2-m.mp4',
+        'assets/vid/conn3-m.mp4',
+        'assets/vid/conn4-m.mp4',
+      ],
+    });
+  </script>
+</body>
+</html>
