@@ -1,0 +1,12 @@
+{
+  "name": "f1-scroll-world-demo",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "bun@1.2.0",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp -R index.html scrub-engine.js assets dist/"
+  },
+  "dependencies": {
+    "vite": "^6.0.0"
+  }
+}
